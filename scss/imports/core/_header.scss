@@ -1,7 +1,7 @@
 // css header
 header {
-  --hHeader: 140px;
-  height: var(--hHeader);
+  --height-header: 140px;
+  height: var(--height-header);
   .top {
     height: 50%;
     width: 100%;
@@ -78,6 +78,7 @@ header {
         @include transform(translateY(-50%));
         img {
           height: 20px;
+          fill: #000;
         }
       }
     }
@@ -103,7 +104,7 @@ header {
             padding: 30px 0 20px;
             height: 100%;
             display: inline-block;
-            @include text(1.2rem, PSB, 3.048rem, $text-cl, uppercase);
+            @include text(var(--h2-fs), PSB, var(--h2-lh), $text-cl, uppercase);
             @include transition($t);
             &:hover {
               color: $yellow-cl;
@@ -114,7 +115,7 @@ header {
     }
   }
   @include xs {
-    --hHeader: 60px;
+    --height-header: 60px;
     .top {
       height: 100%;
       .container {

@@ -41,17 +41,8 @@ $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
   --h1-fs: 7.2rem;
   --h1-lh: 8rem;
 
-  --h2-fs: 5.2rem;
-  --h2-lh: 6rem;
-
-  --h3-fs: 3.2rem;
-  --h3-lh: 4.2rem;
-
-  --h4-fs: 2.4rem;
-  --h4-lh: 3.2rem;
-
-  --h5-fs: 2rem;
-  --h5-lh: 3rem;
+  --h2-fs: 1.2rem;
+  --h2-lh: 3.048rem;
 
   --body12-fs: 1.2rem;
   --body12-lh: 2.2rem;
@@ -60,7 +51,7 @@ $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
 
   --gap: 30px; // gap này sử dụng cho gap cột & padding của container, container-fluid
 
-  --height-header: 80px;
+  --height-header: 140px;
   --height-button: 56px;
   --ptop: 150px;
   --pd-section: 120px;
@@ -73,18 +64,9 @@ $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
     --h1-fs: 3.6rem;
     --h1-lh: 4.2rem;
 
-    --h2-fs: 2.8rem;
-    --h2-lh: 3.8rem;
+    --h2-fs: 1.4rem;
 
-    --h3-fs: 2.2rem;
-    --h3-lh: 3rem;
-
-    --h4-fs: 2rem;
-    --h4-lh: 3.2rem;
-
-    --gap: 20px;
-
-    --height-header: 70px;
+    --height-header: 60px;
     --pd-section: 50px;
     --ptop: 120px;
   }

@@ -1,1 +1,7 @@
 // CSS HOMEPAGE
+.project {
+  padding-top: 55px;
+  @include xs {
+    padding-top: 40px;
+  }
+}

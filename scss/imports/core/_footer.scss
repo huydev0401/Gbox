@@ -7,21 +7,12 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 71%;
+    height: 78%;
     background-color: $yellow-cl;
+    z-index: -1;
   }
-  .container.line {
-    padding: 60px 35px 150px;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: $black-cl;
-    }
+  .container {
+    padding: 0 35px 150px;
   }
   &__top {
     display: flex;
@@ -104,6 +95,11 @@
     .backtotop {
       cursor: pointer;
       display: inline-block;
+      @include transform(translateY(0));
+      @include transition($t);
+      &:hover {
+        @include transform(translateY(-10px));
+      }
       img {
         @include transform(rotate(-90deg));
         width: 20px;
@@ -122,11 +118,12 @@
 
 .footer__mobile {
   display: none;
-  padding-top: 60px;
+  padding-top: 50px;
+  margin-top: 30px;
   border-top: 1px solid $black-cl;
   .footer__info {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     p {
       @include text(1.2rem, PR, 3.048rem, $text-cl, uppercase);
       letter-spacing: 0.12rem;

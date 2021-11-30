@@ -1,0 +1,16 @@
+.studiopage {
+  .studio {
+    &__list {
+      margin-top: 70px;
+      margin-bottom: 20px;
+    }
+    .line {
+      margin-top: initial;
+    }
+    @include xs {
+      &__list {
+        margin-top: 30px;
+      }
+    }
+  }
+}
