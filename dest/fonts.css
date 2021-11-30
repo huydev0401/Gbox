@@ -1,0 +1,54 @@
+/* FONT FACE - font-display: fallback; */
+@font-face {
+  font-family: "AR";
+  src: url("../fonts/Arial.woff2") format("woff2"),
+    url("../fonts/Arial.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "PL";
+  src: url("../fonts/ProximaNovaA-Light.woff2") format("woff2"),
+    url("../fonts/ProximaNovaA-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "PSB";
+  src: url("../fonts/ProximaNova-Semibold.woff2") format("woff2"),
+    url("../fonts/ProximaNova-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "PR";
+  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"),
+    url("../fonts/ProximaNova-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "PB";
+  src: url("../fonts/ProximaNova-Bold.woff2") format("woff2"),
+    url("../fonts/ProximaNova-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "PT";
+  src: url("../fonts/ProximaNovaA-Thin.woff2") format("woff2"),
+    url("../fonts/ProximaNovaA-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: fallback;
+}

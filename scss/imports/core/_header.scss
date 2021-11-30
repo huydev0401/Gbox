@@ -1,0 +1,130 @@
+// css header
+header {
+  --hHeader: 140px;
+  height: var(--hHeader);
+  .top {
+    height: 50%;
+    width: 100%;
+    background-color: $gray-cl;
+    .container {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      .hamburger {
+        display: none;
+        @include size(22px, 15px);
+        position: relative;
+        z-index: 100;
+        cursor: pointer;
+        span {
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $yellow-cl;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include transform(translate(-50%, -50%));
+        }
+        &:before,
+        &:after {
+          display: block;
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: $yellow-cl;
+          position: absolute;
+          left: 0;
+          @include transform(rotate(0deg) translate(0px, 0px));
+          @include transition($t);
+        }
+        &:before {
+          top: 0;
+        }
+        &:after {
+          bottom: 0;
+        }
+        &.active {
+          span {
+            opacity: 0;
+          }
+          &:before {
+            @include transform(rotate(45deg) translate(14px, -3px));
+          }
+          &:after {
+            @include transform(rotate(-45deg) translate(12px, 4px));
+          }
+        }
+      }
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        img {
+          width: 45px;
+          height: 45px;
+        }
+      }
+      .facebook {
+        display: inline-flex;
+        align-items: center;
+        position: absolute;
+        right: calc(var(--gap) / 2);
+        top: 50%;
+        @include transform(translateY(-50%));
+        img {
+          height: 20px;
+        }
+      }
+    }
+  }
+  .nav {
+    height: 50%;
+    .container {
+      height: 100%;
+      .menu {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $black-cl;
+        &__item {
+          height: 100%;
+          &.sub__menu {
+            display: flex;
+            .menu__item + .menu__item {
+              margin-left: 60px;
+            }
+          }
+          a {
+            padding: 30px 0 20px;
+            height: 100%;
+            display: inline-block;
+            @include text(1.2rem, PSB, 3.048rem, $text-cl, uppercase);
+            @include transition($t);
+            &:hover {
+              color: $yellow-cl;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include xs {
+    --hHeader: 60px;
+    .top {
+      height: 100%;
+      .container {
+        .hamburger {
+          display: inline-block;
+        }
+      }
+    }
+    .nav {
+      display: none;
+    }
+  }
+}
