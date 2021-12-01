@@ -302,6 +302,14 @@ article {
 .btn__back {
   display: inline-flex;
   align-items: center;
+  &:hover {
+    span {
+      @include transform(translateX(45px));
+    }
+    img {
+      @include transform(translateX(-90px) rotate(90deg));
+    }
+  }
   span {
     @include text(var(--h2-fs), PR, var(--h2-lh), $text-cl, none);
     margin-right: 30px;
@@ -405,21 +413,6 @@ article {
   }
   &__content {
     display: flex;
-    height: 120px;
-    .num {
-      width: 120px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: $yellow-cl;
-      flex-direction: column;
-      h3 {
-        @include text(6.2rem, DC, 1, $text-cl, none);
-      }
-      h5 {
-        @include text(1.1rem, PR, 2rem, $text-cl, uppercase);
-      }
-    }
     .info {
       flex: 1;
       padding: 30px 30px 0 80px;
@@ -428,17 +421,6 @@ article {
       justify-content: space-between;
       background-color: transparent;
       @include transition($t);
-      .dimension {
-        color: $text-cl;
-        @include transition($t);
-
-        h3 {
-          @include text(var(--h2-fs), PR, var(--h2-lh), inherit, uppercase);
-        }
-        p {
-          color: inherit;
-        }
-      }
       .btn__detail {
         text-align: center;
         span {
@@ -470,8 +452,8 @@ article {
       margin-bottom: 40px;
     }
     &__content {
-      height: 75px;
       .num {
+        height: 75px;
         width: 75px;
         h3 {
           font-size: 3.8rem;
@@ -503,4 +485,99 @@ article {
       }
     }
   }
+}
+
+.num {
+  height: 120px;
+  width: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $yellow-cl;
+  flex-direction: column;
+  h3 {
+    @include text(6.2rem, DC, 1, $text-cl, none);
+  }
+  h5 {
+    @include text(1.1rem, PR, 2rem, $text-cl, uppercase);
+  }
+}
+
+.dimension {
+  color: $text-cl;
+  @include transition($t);
+
+  h3 {
+    @include text(var(--h2-fs), PR, var(--h2-lh), inherit, uppercase);
+  }
+  p {
+    color: inherit;
+  }
+}
+
+.full-screen {
+  display: inline-flex;
+  align-items: center;
+  span {
+    @include text(var(--h2-fs), PR, var(--h2-lh), $text-cl, capitalize);
+    margin-right: 20px;
+  }
+  img {
+    cursor: pointer;
+  }
+}
+
+.control {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 56%;
+    top: 50%;
+    width: 1px;
+    height: 12px;
+    background-color: $gray-cl;
+    @include transform(translateY(-50%));
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    span {
+      @include text(var(--h2-fs), PR, var(--h2-lh), $text-cl, capitalize);
+    }
+    &.--next {
+      img {
+        @include transform(rotate(-90deg));
+      }
+      span {
+        margin-right: 20px;
+      }
+    }
+    &.--prev {
+      img {
+        @include transform(rotate(90deg));
+      }
+      span {
+        margin-left: 20px;
+      }
+    }
+    img {
+      width: 15px;
+    }
+  }
+}
+
+.btn__book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @include text(2.4rem, PEB, 3.048rem, $yellow-cl, uppercase);
+  background-color: $gray-cl;
+  @include size(100px);
+  border-radius: 8px;
 }

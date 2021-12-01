@@ -38,8 +38,8 @@ $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
 
   // font-size & line-height heading
 
-  --h1-fs: 7.2rem;
-  --h1-lh: 8rem;
+  --h1-fs: 3.2rem;
+  --h1-lh: 3.048rem;
 
   --h2-fs: 1.2rem;
   --h2-lh: 3.048rem;
@@ -61,9 +61,6 @@ $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
   }
   @media (max-width: $xs-max) {
     // Mobile
-    --h1-fs: 3.6rem;
-    --h1-lh: 4.2rem;
-
     --h2-fs: 1.4rem;
 
     --height-header: 60px;

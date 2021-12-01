@@ -11,4 +11,22 @@ $(window).on("load", function () {
       $navMobile.removeClass("active");
     }
   });
+
+  // libs
+  // studio slider
+  let $studioSlider = $(".studio__slider");
+  $studioSlider.flickity({
+    cellAlign: "left",
+    contain: true,
+    prevNextButtons: false,
+    pageDots: false,
+    wrapAround: true,
+    lazyLoad: 1,
+  });
+  $(".control__btn.--next").on("click", function () {
+    $studioSlider.flickity("next");
+  });
+  $(".control__btn.--prev").on("click", function () {
+    $studioSlider.flickity("previous");
+  });
 });
