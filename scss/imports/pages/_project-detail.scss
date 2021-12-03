@@ -55,8 +55,9 @@
     }
   }
   @include xs {
-    padding-top: 30px;
+    padding-top: var(--height-header);
     .project__top {
+      padding-top: 40px;
       .right {
         .full-screen {
           display: none;
@@ -64,9 +65,12 @@
       }
     }
     .project__image {
-      margin: 20px 0;
+      margin: 30px 0;
     }
     .project__bottom {
+      .client {
+        order: -1;
+      }
       flex-direction: column;
       row-gap: 35px;
     }

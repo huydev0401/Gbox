@@ -1,0 +1,32 @@
+.aboutpage {
+  .about {
+    padding: 100px 0 60px;
+    margin-bottom: 60px;
+    background: url("../img/x.jpg") no-repeat center / cover;
+    .heading {
+      @include text(3.6rem, PB, 5.8rem, $yellow-cl, uppercase);
+      letter-spacing: 2.16rem;
+      margin-bottom: 10px;
+    }
+    .desc {
+      @include text(1.8rem, PL, 4rem, #fff, none);
+    }
+    .btn__wrap {
+      margin-top: 40px;
+      p {
+        color: #fff;
+      }
+    }
+    @include xs {
+      padding-bottom: 80px;
+      background: url("../img/x-mob.jpg") no-repeat center / cover;
+      .heading {
+        font-size: 2.8rem;
+        letter-spacing: 1.68rem;
+      }
+      .desc {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

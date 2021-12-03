@@ -22,6 +22,7 @@ $white-cl: #fff;
 $black-cl: #231f20;
 $yellow-cl: #ffde00;
 $gray-cl: #525355;
+$gray-dark-cl: #19191a;
 $gray-light-cl: #898989;
 $text-cl: #171717;
 
@@ -41,8 +42,11 @@ $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
   --h1-fs: 3.2rem;
   --h1-lh: 3.048rem;
 
-  --h2-fs: 1.2rem;
+  --h2-fs: 2.8rem;
   --h2-lh: 3.048rem;
+
+  --h3-fs: 1.2rem;
+  --h3-lh: 3.048rem;
 
   --body12-fs: 1.2rem;
   --body12-lh: 2.2rem;
@@ -53,7 +57,7 @@ $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
 
   --height-header: 140px;
   --height-button: 56px;
-  --ptop: 150px;
+  --ptop: 40px;
   --pd-section: 120px;
 
   @media (max-width: $sm-max) {
@@ -65,6 +69,5 @@ $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
 
     --height-header: 60px;
     --pd-section: 50px;
-    --ptop: 120px;
   }
 }

@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>GBOX</title>
+    <title>Rental</title>
     <link rel="icon" href="favicon.ico" />
     <meta name="title" content="" />
     <meta name="description" content="" />
@@ -27,8 +27,7 @@
 
   <!-- Mỗi body của mỗi page nên có class ví dụ homepage, aboutpage, contactpage... -->
 
-  <body class="homepage">
-    <!-- HEADER -->
+  <body class="rentalpage">
     <header>
       <div class="top">
         <div class="container">
@@ -69,142 +68,128 @@
         <li><a href="contact.html">contact</a></li>
       </ul>
     </div>
-    <!-- MAIN -->
+
     <main class="mainwrapper">
-      <section class="project">
+      <section class="rental">
         <div class="container">
-          <div class="textbox mbhide">
-            <h3 class="textbox__welcome">WELCOME<br />TO</h3>
-            <h2 class="textbox__heading">gbox studios</h2>
-            <p class="textbox__desc">
-              <strong>GBOX STUDIOS</strong> aim is to create a full service
-              offering clients the highest quality of work with a comprehensive
-              understanding of modern production, our services include
-              advertising, products, automotive, portraits, beauty, editorial
-              photography and video production. Gbox brand mark was inspired by
-              the brand name and the lens – a visual representation of our
-              world, we aim to create powerful simplicity, all components are
-              coherence based on a box. Gbox is based in Ho Chi Minh City, one
-              of the most beautiful city in Vietnam.
+          <div class="rental__row">
+            <div class="rental__left">
+              <div class="sidebar">
+                <div class="num">
+                  <h5>studio</h5>
+                  <h3>01</h3>
+                </div>
+                <div class="right">
+                  <h2 class="heading --lg">Rental</h2>
+                  <div class="dimension">
+                    <h3>dimensions</h3>
+                    <p>
+                      87ft × 92ft × 31ft <br />
+                      (26.52m × 28.04m × 9.45m)
+                    </p>
+                    <p class="mb">18mW × 18mL × 7mH</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rental__right">
+              <form class="company__form">
+                <h3 class="heading --md">Company details</h3>
+                <div class="content">
+                  <div class="left">
+                    <div class="filed">
+                      <label>Company Name: *</label>
+                      <input type="text" />
+                    </div>
+                    <div class="filed">
+                      <label>Contact Name: *</label>
+                      <input type="text" />
+                    </div>
+                    <div class="filed">
+                      <label>Phone: *</label>
+                      <input type="text" />
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="filed">
+                      <label>E-mail: *</label>
+                      <input type="text" />
+                    </div>
+                    <div class="filed">
+                      <label>Accounts payable contact: *</label>
+                      <input type="text" />
+                    </div>
+                    <div class="filed">
+                      <label>Company Address: *</label>
+                      <textarea></textarea>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <form class="book__form">
+                <h3 class="heading --md">Booking details</h3>
+                <label>Studio:</label>
+                <div class="numbers">
+                  <div class="number active">
+                    <span>01</span>
+                  </div>
+                  <div class="number">
+                    <span>02</span>
+                  </div>
+                  <div class="number">
+                    <span>03</span>
+                  </div>
+                  <div class="number">
+                    <span>04</span>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="filed mg">
+                    <label>Catering requirements:</label>
+                    <textarea></textarea>
+                  </div>
+                  <div class="filed">
+                    <label>Lighting requirements:</label>
+                    <textarea></textarea>
+                    <span class="note"
+                      >Please note: All lighting hire to go through Gbox Studios
+                    </span>
+                  </div>
+                  <div class="filed mg-0 hv-arrow">
+                    <label>Booking Duration:</label>
+                    <input type="date" />
+                    <img src="./img/vector.svg" alt="" />
+                  </div>
+                  <div class="filed">
+                    <input class="mg-17" type="date" />
+                  </div>
+                  <div class="filed">
+                    <label>Project Reference:</label>
+                    <input type="text" />
+                  </div>
+                  <div class="filed">
+                    <label>Where did you hear about us:</label>
+                    <input type="text" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="rental__submit btn__wrap">
+            <a href="#" class="btn__book"
+              >Book <br />
+              Now</a
+            >
+            <p>
+              By submitting this form I agree to <br />
+              <strong>GBox Studio’s</strong> Terms & Conditions.
             </p>
-          </div>
-          <div class="tag__list mbhide">
-            <div class="tag active">all</div>
-            <div class="tag">film</div>
-            <div class="tag">image</div>
-          </div>
-          <div class="project__list">
-            <div class="project__item">
-              <div class="project__img">
-                <a href="project-detail.html">
-                  <img src="./img/home_1.jpg" alt="" />
-                </a>
-              </div>
-              <div class="project__content">
-                <h3>
-                  <a href="project-detail.html" class="heading">project 01</a>
-                </h3>
-                <p class="desc">
-                  clients : Cif <br />
-                  photographer : Eric huynh
-                </p>
-              </div>
-            </div>
-            <div class="project__item">
-              <div class="project__img">
-                <a href="project-detail.html">
-                  <img src="./img/home_2.jpg" alt="" />
-                </a>
-              </div>
-              <div class="project__content">
-                <h3>
-                  <a href="project-detail.html" class="heading">project 01</a>
-                </h3>
-                <p class="desc">
-                  clients : Cif <br />
-                  photographer : Eric huynh <br />
-                  Director : Peter Zech
-                </p>
-              </div>
-            </div>
-            <div class="project__item">
-              <div class="project__img">
-                <a href="project-detail.html">
-                  <img src="./img/home_3.jpg" alt="" />
-                </a>
-              </div>
-              <div class="project__content">
-                <h3>
-                  <a href="project-detail.html" class="heading">project 01</a>
-                </h3>
-                <p class="desc">
-                  clients : Cif <br />
-                  photographer : Eric huynh
-                </p>
-              </div>
-            </div>
-            <div class="project__item">
-              <div class="project__img">
-                <a href="project-detail.html">
-                  <img src="./img/home_4.jpg" alt="" />
-                </a>
-              </div>
-              <div class="project__content">
-                <h3>
-                  <a href="project-detail.html" class="heading">project 01</a>
-                </h3>
-                <p class="desc">
-                  clients : Cif <br />
-                  photographer : Eric huynh
-                </p>
-              </div>
-            </div>
-            <div class="project__item">
-              <div class="project__img">
-                <a href="project-detail.html">
-                  <img src="./img/home_5.jpg" alt="" />
-                </a>
-              </div>
-              <div class="project__content">
-                <h3>
-                  <a href="project-detail.html" class="heading">project 01</a>
-                </h3>
-                <p class="desc">
-                  clients : Cif <br />
-                  photographer : Eric huynh <br />
-                  Director : Peter Zech
-                </p>
-              </div>
-            </div>
-            <div class="project__item">
-              <div class="project__img">
-                <a href="project-detail.html">
-                  <img src="./img/home_6.jpg" alt="" />
-                </a>
-              </div>
-              <div class="project__content">
-                <h3>
-                  <a href="project-detail.html" class="heading">project 01</a>
-                </h3>
-                <p class="desc">
-                  clients : Cif <br />
-                  photographer : Eric huynh
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="more">
-            <a href="#">
-              <span>all works</span>
-              <img src="./img/vector.svg" alt="" />
-            </a>
           </div>
           <div class="line"></div>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
         <div class="footer__top">

@@ -41,8 +41,8 @@ article {
     margin: 0 0 0.67rem 0;
   }
   h2 {
-    font-size: var(--h2-fs);
-    line-height: var(--h2-lh);
+    font-size: var(--h3-fs);
+    line-height: var(--h3-lh);
     margin: 0 0 0.75rem 0;
   }
   h3 {
@@ -123,6 +123,21 @@ article {
     background-color: $black-cl;
     @include transform(translateX(-50%));
   }
+  &.--yellow {
+    &:after {
+      background-color: $yellow-cl;
+    }
+    .textbox__welcome {
+      color: $yellow-cl;
+    }
+    .textbox__heading {
+      color: $yellow-cl;
+      background-color: transparent;
+    }
+    .textbox__desc {
+      color: #fff;
+    }
+  }
   &__welcome {
     @include text(1.4rem, PL, 2.2rem, $text-cl, uppercase);
     letter-spacing: 0.14rem;
@@ -140,13 +155,17 @@ article {
     margin: 0 auto;
   }
   @include xs {
-    padding-bottom: initial;
-    margin-bottom: initial;
-    &:after {
-      display: none;
-    }
-    &__desc {
-      display: none;
+    padding-bottom: 40px;
+    margin-bottom: 25px;
+    &.mbhide {
+      padding-bottom: initial;
+      margin-bottom: initial;
+      &:after {
+        display: none;
+      }
+      .textbox__desc {
+        display: none;
+      }
     }
   }
 }
@@ -157,7 +176,7 @@ article {
   justify-content: center;
   .tag {
     cursor: pointer;
-    @include text(var(--h2-fs), PSB, 1, $gray-light-cl, uppercase);
+    @include text(var(--h3-fs), PSB, 1, $gray-light-cl, uppercase);
     padding: 20px;
     @include transition($t);
     &:hover {
@@ -168,7 +187,9 @@ article {
     }
   }
   @include xs {
-    display: none;
+    &.mbhide {
+      display: none;
+    }
   }
 }
 
@@ -237,7 +258,7 @@ article {
     padding: 30px 0 80px;
     .heading {
       display: block;
-      @include text(var(--h2-fs), PB, var(--h2-lh), $text-cl, uppercase);
+      @include text(var(--h3-fs), PB, var(--h3-lh), $text-cl, uppercase);
       position: relative;
       margin-bottom: 10px;
       @include transition($t);
@@ -283,7 +304,7 @@ article {
       }
     }
     span {
-      @include text(var(--h2-fs), PB, var(--h2-lh), $text-cl, uppercase);
+      @include text(var(--h3-fs), PB, var(--h3-lh), $text-cl, uppercase);
       margin-bottom: 10px;
     }
     img {
@@ -311,7 +332,7 @@ article {
     }
   }
   span {
-    @include text(var(--h2-fs), PR, var(--h2-lh), $text-cl, none);
+    @include text(var(--h3-fs), PR, var(--h3-lh), $text-cl, none);
     margin-right: 30px;
     @include transform(translateX(0));
     @include transition($t);
@@ -425,7 +446,7 @@ article {
         text-align: center;
         span {
           display: block;
-          @include text(var(--h2-fs), PSB, var(--h2-lh), $text-cl, uppercase);
+          @include text(var(--h3-fs), PSB, var(--h3-lh), $text-cl, uppercase);
           @include transition($t);
         }
         svg {
@@ -508,7 +529,7 @@ article {
   @include transition($t);
 
   h3 {
-    @include text(var(--h2-fs), PR, var(--h2-lh), inherit, uppercase);
+    @include text(var(--h3-fs), PR, var(--h3-lh), inherit, uppercase);
   }
   p {
     color: inherit;
@@ -519,7 +540,7 @@ article {
   display: inline-flex;
   align-items: center;
   span {
-    @include text(var(--h2-fs), PR, var(--h2-lh), $text-cl, capitalize);
+    @include text(var(--h3-fs), PR, var(--h3-lh), $text-cl, capitalize);
     margin-right: 20px;
   }
   img {
@@ -531,6 +552,23 @@ article {
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
+  width: fit-content;
+  &.--yellow {
+    &:before {
+      background-color: $yellow-cl;
+    }
+    .control__btn {
+      span {
+        color: $yellow-cl;
+      }
+    }
+    svg {
+      width: 15px;
+      polygon {
+        fill: $yellow-cl;
+      }
+    }
+  }
   &:before {
     content: "";
     position: absolute;
@@ -547,10 +585,10 @@ article {
     justify-content: flex-end;
     cursor: pointer;
     span {
-      @include text(var(--h2-fs), PR, var(--h2-lh), $text-cl, capitalize);
+      @include text(var(--h3-fs), PR, var(--h3-lh), $text-cl, capitalize);
     }
     &.--next {
-      img {
+      svg {
         @include transform(rotate(-90deg));
       }
       span {
@@ -558,20 +596,35 @@ article {
       }
     }
     &.--prev {
-      img {
+      svg {
         @include transform(rotate(90deg));
       }
       span {
         margin-left: 20px;
       }
     }
-    img {
+    svg {
       width: 15px;
+      polygon {
+        fill: $gray-cl;
+      }
     }
   }
 }
 
+.btn__wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 0 20px;
+  p {
+    font-family: PR;
+  }
+}
 .btn__book {
+  &.--yellow {
+    background-color: $yellow-cl;
+    color: $text-cl;
+  }
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -580,4 +633,25 @@ article {
   background-color: $gray-cl;
   @include size(100px);
   border-radius: 8px;
+}
+
+.heading {
+  font-family: PEB;
+  color: $text-cl;
+  &.--lg {
+    font-size: var(--h1-fs);
+    line-height: var(--h1-lh);
+  }
+  &.--md {
+    font-size: var(--h2-fs);
+    line-height: var(--h2-lh);
+  }
+}
+
+.title {
+  letter-spacing: 0.28rem;
+  @include text(1.4rem, PL, 2.2rem, $text-cl, uppercase);
+  &.--white {
+    color: #fff;
+  }
 }

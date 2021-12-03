@@ -1,0 +1,66 @@
+.contact {
+  background: url("../img/contact-bg.jpg") no-repeat center / cover;
+  padding: 90px 0 20px;
+  text-align: center;
+  &__logo {
+    svg {
+      width: 105px;
+      fill: #fff;
+    }
+  }
+  &__info {
+    margin-top: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    p {
+      @include text(var(--h3-fs), PR, var(--h3-lh), inherit, uppercase);
+      letter-spacing: 0.12rem;
+    }
+    .left {
+      text-align: right;
+      margin-right: 60px;
+    }
+    .right {
+      text-align: left;
+      .tel {
+        margin-top: 30px;
+        span {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+  .more {
+    svg {
+      margin-top: 60px;
+      fill: #fff;
+      width: 15px;
+      cursor: pointer;
+    }
+  }
+  @include xs {
+    padding: 120px 0;
+    &__logo {
+      display: none;
+    }
+    &__info {
+      flex-direction: column-reverse;
+      align-items: center;
+      .left {
+        text-align: center;
+        margin-right: initial;
+      }
+      .right {
+        text-align: center;
+        .tel {
+          margin-top: initial;
+        }
+      }
+    }
+    .more {
+      display: none;
+    }
+  }
+}

@@ -38,7 +38,7 @@
       display: flex;
       align-items: center;
       span {
-        @include text(var(--h2-fs), PR, var(--h2-lh), $text-cl, capitalize);
+        @include text(var(--h3-fs), PR, var(--h3-lh), $text-cl, capitalize);
       }
       .download-icon {
         width: 15px;
@@ -135,6 +135,7 @@
     }
   }
   @include xs {
+    padding-top: var(--height-header);
     .bottom {
       padding: initial;
       .num {

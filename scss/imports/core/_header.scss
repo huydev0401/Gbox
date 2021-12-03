@@ -92,6 +92,9 @@ header {
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid $black-cl;
+        &.no-border {
+          border-bottom: none;
+        }
         &__item {
           height: 100%;
           &.sub__menu {
@@ -104,7 +107,7 @@ header {
             padding: 30px 0 20px;
             height: 100%;
             display: inline-block;
-            @include text(var(--h2-fs), PSB, var(--h2-lh), $text-cl, uppercase);
+            @include text(var(--h3-fs), PSB, var(--h3-lh), $text-cl, uppercase);
             @include transition($t);
             &:hover {
               color: $yellow-cl;
@@ -115,6 +118,11 @@ header {
     }
   }
   @include xs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
     --height-header: 60px;
     .top {
       height: 100%;

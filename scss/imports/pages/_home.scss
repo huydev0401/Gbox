@@ -2,6 +2,9 @@
 .project {
   padding-top: 55px;
   @include xs {
-    padding-top: 40px;
+    padding-top: var(--height-header);
+    .textbox {
+      margin-top: 40px;
+    }
   }
 }

@@ -29,4 +29,21 @@ $(window).on("load", function () {
   $(".control__btn.--prev").on("click", function () {
     $studioSlider.flickity("previous");
   });
+
+  // cafe gallery
+  let $cafeGallery = $(".cafe__gallery");
+  $cafeGallery.flickity({
+    cellAlign: "left",
+    contain: true,
+    prevNextButtons: false,
+    pageDots: false,
+    wrapAround: true,
+    lazyLoad: 1,
+  });
+  $(".control__btn.--next").on("click", function () {
+    $cafeGallery.flickity("next");
+  });
+  $(".control__btn.--prev").on("click", function () {
+    $cafeGallery.flickity("previous");
+  });
 });
