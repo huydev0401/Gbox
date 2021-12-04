@@ -2,7 +2,7 @@
   .about {
     padding: 100px 0 60px;
     margin-bottom: 60px;
-    background: url("../img/x.jpg") no-repeat center / cover !important;
+    background: url("../img/x.jpg") no-repeat center / cover;
     .heading {
       @include text(3.6rem, PB, 5.8rem, $yellow-cl, uppercase);
       letter-spacing: 2.16rem;
@@ -19,7 +19,7 @@
     }
     @include xs {
       padding-bottom: 80px;
-      background: url("../img/x-mob.jpg") no-repeat center / cover;
+      background: url("../img/x-mob.jpg") no-repeat center / cover !important;
       .heading {
         font-size: 2.8rem;
         letter-spacing: 1.68rem;
