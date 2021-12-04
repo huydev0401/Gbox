@@ -20,6 +20,7 @@
         top: 50%;
         left: 50%;
         @include transform(translate(-50%, -50%));
+        object-fit: cover;
       }
     }
   }
@@ -62,8 +63,7 @@
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
     grid-gap: 60px;
-    .title {
-      @include text(var(--h1-fs), PEB, var(--h1-lh), $text-cl, capitalize);
+    .heading {
       margin-bottom: 20px;
     }
     .pricing {
